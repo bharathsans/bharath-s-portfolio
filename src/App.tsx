@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { sections } from './data/sections';
 import { useBodyBgOnSection } from './hooks/useBodyBgOnSection';
 import Navbar from './components/Navbar';
@@ -13,6 +13,11 @@ const scrollToSection = (id: string) => {
 
 export default function App() {
   useBodyBgOnSection(sections);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="relative min-h-screen font-sans w-full overflow-x-hidden">
       <Navbar sections={sections} onNavClick={scrollToSection} />
