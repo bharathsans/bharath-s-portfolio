@@ -1,18 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import './index.css'
+import React from 'react';
+import { sections } from './data/sections';
+import { useBodyBgOnSection } from './hooks/useBodyBgOnSection';
+import Navbar from './components/Navbar';
+import Intro from './sections/Intro';
+import Experience from './sections/Experience';
+import Projects from './sections/Projects';
+import Contact from './sections/Contact';
 
-function App() {
+const scrollToSection = (id: string) => {
+  document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+};
+
+export default function App() {
+  useBodyBgOnSection(sections);
   return (
-    <div className="min-h-screen bg-red-500 flex items-center justify-center">
-      <h1 className="text-4xl font-bold text-gray-900">
-        Tailwind is Workings!
-      </h1>
+    <div className="relative min-h-screen font-sans w-full overflow-x-hidden">
+      <Navbar sections={sections} onNavClick={scrollToSection} />
+      <main className="pt-24 w-full">
+        <Intro />
+        <Experience />
+        <Projects />
+        <Contact />
+      </main>
     </div>
   );
 }
-
-export default App;
-
