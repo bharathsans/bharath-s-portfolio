@@ -27,7 +27,7 @@ const Navbar: React.FC<NavbarProps> = ({ sections, onNavClick }) => {
             <button
               key={section.id}
               onClick={() => handleNavClick(section.id)}
-              className="text-lg font-medium text-gray-700 hover:text-blue-700 transition-colors duration-200"
+              className="text-lg font-semibold font-serif text-gray-900 hover:text-blue-700 transition-colors duration-200"
             >
               {section.label}
             </button>
@@ -38,7 +38,7 @@ const Navbar: React.FC<NavbarProps> = ({ sections, onNavClick }) => {
         <div className="md:hidden flex justify-end w-full">
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="text-gray-700 hover:text-blue-700 focus:outline-none focus:text-blue-700"
+            className="text-gray-900 hover:text-blue-700 focus:outline-none focus:text-blue-700"
             aria-label="Toggle navigation"
           >
             <svg
@@ -66,7 +66,7 @@ const Navbar: React.FC<NavbarProps> = ({ sections, onNavClick }) => {
             <button
               key={section.id}
               onClick={() => handleNavClick(section.id)}
-              className="text-3xl font-bold text-gray-800 hover:text-blue-700 transition-colors duration-200"
+              className="text-3xl font-bold font-serif text-gray-900 hover:text-blue-700 transition-colors duration-200"
             >
               {section.label}
             </button>
@@ -74,7 +74,7 @@ const Navbar: React.FC<NavbarProps> = ({ sections, onNavClick }) => {
           {/* Close button for mobile menu */}
           <button
             onClick={() => setIsMenuOpen(false)}
-            className="absolute top-6 right-6 text-gray-700 hover:text-blue-700 focus:outline-none focus:text-blue-700"
+            className="absolute top-6 right-6 text-gray-900 hover:text-blue-700 focus:outline-none focus:text-blue-700"
             aria-label="Close navigation"
           >
             <svg
