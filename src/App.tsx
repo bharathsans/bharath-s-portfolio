@@ -38,8 +38,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="relative min-h-screen font-sans w-full overflow-x-hidden">
-      <FootprintTrail />
+    <div className="relative font-sans antialiased text-gray-800">
       <Navbar sections={sections} onNavClick={scrollToSection} />
       <main className="pt-24 w-full">
         <Intro />
@@ -49,6 +48,7 @@ export default function App() {
       </main>
       <AudioPlayer />
       <LightBulbInteractive />
+      <FootprintTrail />
     </div>
   );
 }

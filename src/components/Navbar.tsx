@@ -22,12 +22,12 @@ const Navbar: React.FC<NavbarProps> = ({ sections, onNavClick }) => {
     <nav className="fixed top-0 left-0 w-full z-50 bg-opacity-70 backdrop-blur-md">
       <div className="container mx-auto px-4 py-6 flex items-center md:justify-center">
         {/* Desktop Navigation - Centered for desktop */}
-        <div className="hidden md:flex justify-center items-center gap-8 flex-grow">
+        <div className="hidden md:flex justify-center items-center gap-12 flex-grow">
           {sections.map((section) => (
             <button
               key={section.id}
               onClick={() => handleNavClick(section.id)}
-              className="text-lg font-semibold font-serif text-gray-900 hover:text-blue-700 transition-colors duration-200"
+              className="text-xl font-extrabold font-serif text-gray-900 hover:text-blue-700 transition-colors duration-200"
             >
               {section.label}
             </button>

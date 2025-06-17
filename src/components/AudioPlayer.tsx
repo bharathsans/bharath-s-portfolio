@@ -41,7 +41,7 @@ const AudioPlayer: React.FC = () => {
 
   return (
     <div
-      className="fixed right-8 bottom-8 z-50 cursor-pointer"
+      className="fixed right-8 bottom-8 z-40 cursor-pointer"
       onClick={togglePlayPause}
       aria-label={isUserMuted ? "Play audio" : "Pause audio"} // Aria label based on mute state
     >

@@ -13,7 +13,7 @@ const LightBulbInteractive: React.FC = () => {
   return (
     <div
       ref={constraintsRef}
-      className="fixed top-0 right-16 z-50 h-full w-24 flex justify-center pointer-events-none"
+      className="fixed top-0 right-16 z-40 h-full w-24 flex justify-center pointer-events-none"
     >
       {/* The string - fixed at top, extends down */}
       <motion.div

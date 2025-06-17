@@ -68,7 +68,9 @@ const Projects: React.FC = () => {
   const handleRightArrowClick = () => {
     let current = x.get();
     let next = current - SCROLL_AMOUNT;
-    if (next < maxDrag) next = maxDrag;
+    if (next < maxDrag) {
+      next = maxDrag;
+    }
     animate(x, next, { type: 'spring', stiffness: 300, damping: 30 });
   };
 
@@ -76,13 +78,21 @@ const Projects: React.FC = () => {
   const handleLeftArrowClick = () => {
     let current = x.get();
     let next = current + SCROLL_AMOUNT;
-    if (next > 0) next = 0;
+    if (next > 0) {
+      next = 0;
+    }
     animate(x, next, { type: 'spring', stiffness: 300, damping: 30 });
   };
 
   return (
     <section id="works-highlights" className="w-full h-screen flex flex-col justify-center items-center pt-48 pb-16 scroll-mt-48">
       <div className="text-center mb-12">
+        <div className="w-32 h-32 mx-auto mb-8 relative flex items-center justify-center">
+          <div className="absolute inset-0 bg-gradient-to-br from-green-300 via-green-200 to-white rounded-full animate-pulse opacity-80 shadow-2xl" />
+          <div className="absolute inset-2 bg-white/80 rounded-full flex items-center justify-center border-4 border-green-300 shadow-inner animate-[wiggle_2s_ease-in-out_infinite]">
+            <span className="text-5xl select-none" role="img" aria-label="trophy">🏆</span>
+          </div>
+        </div>
         <h2 className="text-5xl font-serif font-bold mb-2">Works & Highlights</h2>
         <div className="text-xl font-light mb-4 tracking-widest">注目作品</div>
         <p className="mb-8 text-lg">Here are some of my recent works and proudest achievements</p>
