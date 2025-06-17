@@ -4,43 +4,55 @@ import { FiArrowDown } from 'react-icons/fi';
 
 const projects = [
   {
-    title: 'Project One',
-    description: 'A brief description of the project and its key features.',
+    title: 'LiGenChess',
+    description: 'An open source project which acts as an AI wrapper over Lichess. Automations and advanced analytics/ training',
     tags: [
       { label: 'React', color: 'bg-blue-100 text-blue-800' },
-      { label: 'Node.js', color: 'bg-green-100 text-green-800' },
-    ],
-  },
-  {
-    title: 'Project Two',
-    description: 'Another amazing project with its unique features and technologies.',
-    tags: [
-      { label: 'TypeScript', color: 'bg-purple-100 text-purple-800' },
+      { label: 'Java - SpringBoot', color: 'bg-green-100 text-green-800' },
+      { label: 'GenAI / RAG', color: 'bg-red-100 text-blue-800' },
       { label: 'MongoDB', color: 'bg-yellow-100 text-yellow-800' },
     ],
   },
   {
-    title: 'Achievement: Hackathon Winner',
-    description: 'Won 1st place at the National Hackathon for building a real-time collaboration tool.',
+    title: 'Central Config Management',
+    description: 'Devloped a service along with UI where users can perform CRUD operations on all the config files. Improved build times as config files are out of the codebase',
     tags: [
-      { label: 'Award', color: 'bg-yellow-200 text-yellow-900' },
-      { label: 'Collaboration', color: 'bg-blue-50 text-blue-700' },
+      { label: 'Golang', color: 'bg-purple-100 text-purple-800' },
+      { label: 'MongoDB', color: 'bg-yellow-100 text-yellow-800' },
+      { label: 'CI/CD - Docker & k8s', color: 'bg-blue-100 text-blue-800' },
     ],
   },
   {
-    title: 'Open Source Contributor',
-    description: 'Contributed to several open source projects, including a popular React library.',
+    title: 'Best Employee Award FY23-24',
+    description: 'Awarded the best employee award in my org for delivering time bound critical features and impact',
     tags: [
-      { label: 'Open Source', color: 'bg-green-100 text-green-800' },
+      { label: 'System Design', color: 'bg-purple-100 text-purple-800' },
+      { label: 'Leadership', color: 'bg-yellow-100 text-yellow-800' },
+    ],
+  },
+  {
+    title: 'ICPC Regionalist - Asia West',
+    description: 'Qualified for ICPC Regionals, competed at Amritapuri and IIT Kharagpur',
+    tags: [
+      { label: 'C++', color: 'bg-yellow-200 text-yellow-900' },
+      { label: 'DSA', color: 'bg-blue-50 text-blue-700' },
+    ],
+  },
+  {
+    title: 'This portfolio website!',
+    description: 'Since you are already here, please feel free to explore!',
+    tags: [
+      { label: 'Typrescript', color: 'bg-green-100 text-green-800' },
       { label: 'React', color: 'bg-blue-100 text-blue-800' },
+      { label: 'Vite', color: 'bg-blue-100 text-blue-800' },
     ],
   },
   {
-    title: 'Chess AI Bot',
-    description: 'Developed a chess AI bot that plays at an advanced level and explains its moves.',
+    title: 'Winners at multiple inter-college competetive programming contest',
+    description: 'Constantly ranked at top 1% in most competetive coding contest in Codeforces, Leetcode, Hackerrank',
     tags: [
-      { label: 'AI', color: 'bg-purple-100 text-purple-800' },
-      { label: 'Chess', color: 'bg-gray-200 text-gray-800' },
+      { label: 'C++', color: 'bg-purple-100 text-purple-800' },
+      { label: 'DSA', color: 'bg-gray-200 text-gray-800' },
     ],
   },
 ];

@@ -66,13 +66,13 @@ const Contact: React.FC = () => (
           <FiMail className="text-2xl text-purple-500 drop-shadow" />
           <span className="break-all">sanbharath99@gmail.com</span>
         </a>
-        <a href="#" className="flex items-center gap-3 text-lg text-gray-800 hover:text-purple-700 transition-colors font-medium">
+        <a href="https://www.linkedin.com/in/bharath-san/" target="_blank" className="flex items-center gap-3 text-lg text-gray-800 hover:text-purple-700 transition-colors font-medium">
           <FiLinkedin className="text-2xl text-purple-500 drop-shadow" />
           <span>LinkedIn</span>
         </a>
         <a href="tel:" className="flex items-center gap-3 text-lg text-gray-800 hover:text-purple-700 transition-colors font-medium">
           <FiPhone className="text-2xl text-purple-500 drop-shadow" />
-          <span>Phone</span>
+          <span>9894074855</span>
         </a>
       </div>
     </div>

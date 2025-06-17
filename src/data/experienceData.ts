@@ -37,14 +37,14 @@ export const experienceData: ExperienceItem[] = [
   {
     id: 'competitive-programming',
     year: '2017 - Ongoing',
-    company: 'Competitive Programming',
-    title: 'Algorithmic Author & Participant',
-    description: 'Authored algorithmic challenges for GeeksforGeeks and Hackerrank. Participated in ICPC Regionals and secured multiple inter-college contest wins. Achieved top 1% ranking in several competitive programming contests.',
+    company: 'Anokha - GFG and Hackerrank',
+    title: 'Algorithmic Author',
+    description: 'Authored algorithmic challenges for GeeksforGeeks and Hackerrank. Conducted ployglot coding contest as part of the Techfest. Tested problems with tight time limits',
     techStack: ['C++', 'Java', 'Algorithms', 'Data Structures', 'Problem Solving'],
     achievements: [
       'Authored 10+ algorithmic problems for major coding platforms.',
-      'ICPC Regionals Participant (2018).',
-      'Top 1% ranking on platforms like CodeChef and HackerRank.'
+      'ICPC Regionals Participant',
+      'Top 1% ranking on platforms like Codeforces, Leetcode and HackerRank.'
     ]
   },
 ]; 
