@@ -3,14 +3,19 @@ import React, { useState } from 'react';
 interface Section {
   id: string;
   label: string;
+  jp: string;
+  bg: string;
+  backgroundImage: string;
+  bgImageOpacity: number;
 }
 
 interface NavbarProps {
   sections: Section[];
   onNavClick: (id: string) => void;
+  activeSectionId: string | null;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ sections, onNavClick }) => {
+const Navbar: React.FC<NavbarProps> = ({ sections, onNavClick, activeSectionId }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleNavClick = (id: string) => {
@@ -27,7 +32,7 @@ const Navbar: React.FC<NavbarProps> = ({ sections, onNavClick }) => {
             <button
               key={section.id}
               onClick={() => handleNavClick(section.id)}
-              className="text-xl font-extrabold font-serif text-gray-900 hover:text-blue-700 transition-colors duration-200"
+              className={`text-xl font-extrabold font-serif ${activeSectionId === section.id ? 'text-blue-700' : 'text-gray-900'} hover:text-blue-700 transition-colors duration-200`}
             >
               {section.label}
             </button>
@@ -66,7 +71,7 @@ const Navbar: React.FC<NavbarProps> = ({ sections, onNavClick }) => {
             <button
               key={section.id}
               onClick={() => handleNavClick(section.id)}
-              className="text-3xl font-bold font-serif text-gray-900 hover:text-blue-700 transition-colors duration-200"
+              className={`text-3xl font-bold font-serif ${activeSectionId === section.id ? 'text-blue-700' : 'text-gray-900'} hover:text-blue-700 transition-colors duration-200`}
             >
               {section.label}
             </button>

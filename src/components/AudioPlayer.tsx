@@ -7,24 +7,25 @@ const AudioPlayer: React.FC = () => {
 
   // Function to toggle play/pause and mute/unmute
   const togglePlayPause = useCallback(() => {
-    if (audioRef.current) {
-      if (audioRef.current.paused || audioRef.current.muted) {
+    const audio = audioRef.current; // Capture the current ref value
+    if (audio) {
+      if (audio.paused || audio.muted) {
         // If paused or muted, attempt to play and unmute
-        audioRef.current.muted = false; // Explicitly unmute
-        audioRef.current.play().then(() => {
+        audio.muted = false; // Explicitly unmute
+        audio.play().then(() => {
           setIsPlaying(true);
           setIsUserMuted(false); // Update visual state to unmuted
         }).catch(error => {
           console.error("Error playing audio:", error);
           // Fallback if autoplay is blocked: keep muted and not playing
-          audioRef.current.muted = true;
+          audio.muted = true;
           setIsPlaying(false);
           setIsUserMuted(true);
         });
       } else {
         // If playing and unmuted, pause and mute
-        audioRef.current.pause();
-        audioRef.current.muted = true; // Explicitly mute
+        audio.pause();
+        audio.muted = true; // Explicitly mute
         setIsPlaying(false);
         setIsUserMuted(true); // Update visual state to muted
       }
@@ -33,9 +34,10 @@ const AudioPlayer: React.FC = () => {
 
   // Effect to ensure audio element is initially muted and volume is set
   useEffect(() => {
-    if (audioRef.current) {
-      audioRef.current.muted = true; // Ensure initial mute via JS
-      audioRef.current.volume = 0.5; // Set a default volume
+    const audio = audioRef.current;
+    if (audio) {
+      audio.muted = true; // Ensure initial mute via JS
+      audio.volume = 0.5; // Set a default volume
     }
   }, []);
 

@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { motion, useMotionValue, animate } from 'framer-motion';
 import { FiArrowDown } from 'react-icons/fi';
 

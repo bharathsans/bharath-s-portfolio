@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 const LightBulbInteractive: React.FC = () => {
   const [isGlowOn, setIsGlowOn] = useState(false);
   const constraintsRef = useRef(null); // Ref for the draggable constraints
-  const stringRef = useRef<HTMLDivElement>(null);
 
   const toggleGlow = useCallback(() => {
     setIsGlowOn((prev) => !prev);

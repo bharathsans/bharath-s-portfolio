@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { sections } from './data/sections';
 import { useActiveSection } from './hooks/useActiveSection';
 import Navbar from './components/Navbar';
