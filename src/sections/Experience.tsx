@@ -3,6 +3,14 @@ import ExperienceTimeline from '../components/ExperienceTimeline';
 
 const Experience: React.FC = () => (
   <section id="experience" className="w-full min-h-screen flex flex-col justify-center items-center py-16 scroll-mt-20 relative overflow-hidden">
+    {/* Background image for blending */}
+    <div className="absolute inset-0 w-full h-full z-0 flex items-center justify-center">
+      <img 
+        src="/blue-1.avif" 
+        alt="Experience Background"
+        className="w-full h-full object-cover opacity-20 pointer-events-none"
+      />
+    </div>
     <div className="text-center mb-4 w-full px-4 relative z-10"> {/* Added relative z-10 to ensure content is above image */}
       <div className="w-32 h-32 mx-auto mb-8 relative flex items-center justify-center">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-300 via-blue-200 to-white rounded-full animate-pulse opacity-80 shadow-2xl" />

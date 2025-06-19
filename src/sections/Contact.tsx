@@ -19,6 +19,14 @@ const neonGlowStyle = {
 
 const Contact: React.FC = () => (
   <section id="contact" className="w-screen min-h-screen flex flex-col justify-center items-center pt-64 scroll-mt-96 overflow-x-hidden relative">
+    {/* Background image for blending */}
+    <div className="absolute inset-0 w-full h-full z-0 flex items-center justify-center">
+      <img 
+        src="/icemountain.avif" 
+        alt="Contact Me Background"
+        className="w-full h-full object-cover opacity-20 pointer-events-none"
+      />
+    </div>
     {/* Neon glow animation keyframes */}
     <style>{`
       @keyframes neonGlow {
@@ -30,7 +38,7 @@ const Contact: React.FC = () => (
         }
       }
     `}</style>
-    <div className="text-center mb-8 w-full px-4 relative">
+    <div className="text-center mb-8 w-full px-4 relative z-10">
       <div className="w-32 h-32 mx-auto mb-8 relative flex items-center justify-center">
         <div className="absolute inset-0 bg-gradient-to-br from-purple-300 via-purple-200 to-white rounded-full animate-pulse opacity-80 shadow-2xl" />
         <div className="absolute inset-2 bg-white/80 rounded-full flex items-center justify-center border-4 border-purple-300 shadow-inner animate-[wiggle_2s_ease-in-out_infinite]">
@@ -44,7 +52,7 @@ const Contact: React.FC = () => (
         <div className="w-24 h-1 bg-gradient-to-r from-purple-400 via-purple-200 to-purple-400 rounded-full blur-sm opacity-70" />
       </div>
     </div>
-    <div className="flex flex-col md:flex-row gap-8 w-[90%] md:w-[80%] justify-center items-stretch relative">
+    <div className="flex flex-col md:flex-row gap-8 w-[90%] md:w-[80%] justify-center items-stretch relative z-10">
       {/* Message Form */}
       <div className="flex-1 relative bg-gradient-to-br from-white/90 via-purple-100/80 to-purple-200/70 rounded-2xl shadow-xl p-10 flex flex-col items-center justify-center backdrop-blur-md overflow-hidden" style={neonGlowStyle}>
         <MagicalSparkles />
@@ -76,7 +84,7 @@ const Contact: React.FC = () => (
         </a>
       </div>
     </div>
-    <div className="mt-16 mb-16 text-center w-full">
+    <div className="mt-16 mb-16 text-center w-full relative z-10">
       <div className="flex justify-center mb-4">
         <div className="w-24 h-1 bg-gradient-to-r from-purple-400 via-purple-200 to-purple-400 rounded-full blur-sm opacity-70" />
       </div>

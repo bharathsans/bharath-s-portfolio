@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { sections } from './data/sections';
-import { useBodyBgOnSection } from './hooks/useBodyBgOnSection';
+import { useActiveSection } from './hooks/useActiveSection';
 import Navbar from './components/Navbar';
 import Intro from './sections/Intro';
 import Experience from './sections/Experience';
@@ -15,7 +15,7 @@ const scrollToSection = (id: string) => {
 };
 
 export default function App() {
-  useBodyBgOnSection(sections);
+  const activeSectionId = useActiveSection(sections);
 
   useEffect(() => {
     // Disable browser's native scroll restoration
@@ -38,9 +38,9 @@ export default function App() {
   }, []);
 
   return (
-    <div className="relative font-sans antialiased text-gray-800">
-      <Navbar sections={sections} onNavClick={scrollToSection} />
-      <main className="pt-24 w-full">
+    <div className="relative font-sans antialiased text-gray-800 bg-[#F0F0F0]">
+      <Navbar sections={sections} onNavClick={scrollToSection} activeSectionId={activeSectionId} />
+      <main className="w-full">
         <Intro />
         <Experience />
         <Projects />
